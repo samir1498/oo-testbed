@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Client-side routing: every path must serve the SPA shell, or a generated test
+# that navigates straight to /login gets Netlify's 404 instead of the app.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
